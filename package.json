@@ -1,7 +1,7 @@
 {
   "name": "{{param `github.repo` | lowercase}}",
   "version": "1.0.0",
-  "description": "{{param `description` `` `Project description: `}}",
+  "description": "{{param `description`}}",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{param "github.owner"}}/{{param "github.repo"}}.git"
+    "url": "git+https://github.com/{{param `github.owner`}}/{{param `github.repo`}}.git"
   },
-  "author": "{{param "git.name"}}<{{param "git.email"}}>",
+  "author": "{{param `git.name`}}<{{param `git.email`}}>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/{{param "github.owner"}}/{{param "github.repo"}}/issues"
+    "url": "https://github.com/{{param `github.owner`}}/{{param `github.repo`}}/issues"
   },
-  "homepage": "https://github.com/{{param "github.owner"}}/{{param "github.repo"}}#readme",
+  "homepage": "https://github.com/{{param `github.owner`}}/{{param `github.repo`}}#readme",
   "devDependencies": {
     "jest": "^29.7.0"
   }
