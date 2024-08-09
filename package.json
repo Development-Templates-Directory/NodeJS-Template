@@ -1,7 +1,7 @@
 {
-  "name": "{{param "github.repo" | lowercase}}",
+  "name": "{{param (github.repo) | lowercase}}",
   "version": "1.0.0",
-  "description": "{{param "description" "" "Project description: "}}",
+  "description": "{{param \"description\" \"\" \"Project description: \"}}",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
